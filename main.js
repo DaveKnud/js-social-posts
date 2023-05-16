@@ -60,14 +60,40 @@ const elContainer = document.getElementById("container")
 
 //Creazione Ciclo forEach
 posts.forEach((info) => {
-    console.log(info.id + info.content + info.media + info.author);
+    console.log(info.id + info.content + info.media + info.author + info.likes + info.created);
         
     elContainer.innerHTML += 
-        `<div> 
-            <div>${info.content}</div>
-            <p>${info.content}</p>
-            <div> <img src="${info.media}"> </div>
-            <div>${info.author}</div>
+        `<div class="post">
+            <div class="post__header">
+                <div class="post-meta">
+                    <div class="post-meta__icon">
+                        <img class="profile-pic" src= ${info.author.image}  alt="Phil Mangione">  
+                    </div>
+                    <div class="post-meta__data">
+                        <div class="post-meta__author"> ${info.author.name}</div>
+                        <div class="post-meta__time"> ${info.created}</div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="post__text"> ${info.content}</div>
+            <div class="post__image">
+                <img src=${info.media} alt="">
+            </div>
+            <div class="post__footer">
+                <div class="likes js-likes">
+                    <div class="likes__cta">
+                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                            <span class="like-button__label">Mi Piace</span>
+                        </a>
+                    </div>
+                    <div class="likes__counter">
+                        Piace a <b id=${info.id} class="js-likes-counter">${info.likes}</b> persone
+                    </div>
+                </div> 
+            </div>            
+        </div> -->
+
         </div>`;
     }
 );
