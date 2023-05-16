@@ -55,3 +55,19 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+const elContainer = document.getElementById("container")
+
+//Creazione Ciclo forEach
+posts.forEach((info) => {
+    console.log(info.id + info.content + info.media + info.author);
+        
+    elContainer.innerHTML += 
+        `<div> 
+            <div>${info.content}</div>
+            <p>${info.content}</p>
+            <div> <img src="${info.media}"> </div>
+            <div>${info.author}</div>
+        </div>`;
+    }
+);
