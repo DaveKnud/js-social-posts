@@ -1,3 +1,5 @@
+//Milestone 1 - Creiamo il nostro array di oggetti che rappresentano ciascun post. Ogni post dovrà avere le informazioni necessarie per stampare la relativa card:
+
 const posts = [
     {
         "id": 1,
@@ -56,6 +58,8 @@ const posts = [
     }
 ];
 
+//Milestone2 Prendendo come riferimento il layout di esempio presente nell’html, stampiamo i post del nostro feed.
+
 const elContainer = document.getElementById("container")
 
 //Creazione Ciclo forEach
@@ -92,8 +96,19 @@ posts.forEach((info) => {
                     </div>
                 </div> 
             </div>            
-        </div> -->
+        </div> 
+`;
+    }
+);
 
-        </div>`;
+//Milestone 3 - Se clicchiamo sul tasto “Mi Piace” cambiamo il colore al testo del bottone e incrementiamo il counter dei likes relativo.
+//Salviamo in un secondo array gli id dei post ai quali abbiamo messo il like.
+
+const button = document.getElementsByClassName("like-button.js-like-button");
+
+button.addEventListener("click",
+    function()
+    {
+        console.log("il bottone funziona");
     }
 );
